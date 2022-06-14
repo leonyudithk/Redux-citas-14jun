@@ -1,18 +1,34 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Agregar from '../components/Agregar';
-import Home from '../components/Home';
-import NavBars from '../components/NavBars';
+import Login from '../components/Login';
+import DashboardRouters from './DashboardRouters';
+import { PrivateRouter } from './PrivateRouter';
+import { PublicRouter } from './PublicRouter';
 
 const AppRouters = () => {
+
+    
+    const user = true
+
     return (
-       <BrowserRouter>
-       <NavBars/>
-           <Routes>
-               <Route path="/" element={<Home/>}/>
-               <Route path="/add" element={<Agregar />}/>
-           </Routes>
-       </BrowserRouter>
+        <BrowserRouter>
+        
+            <Routes>
+
+                <Route path="/login" element={
+                    <PublicRouter isAutentication={user}>
+                        <Login />
+                    </PublicRouter>
+
+                } />
+
+                <Route path="/*" element={
+                    <PrivateRouter isAutentication={user}>
+                        <DashboardRouters />
+                    </PrivateRouter>
+                } />
+            </Routes>
+        </BrowserRouter>
     );
 };
 

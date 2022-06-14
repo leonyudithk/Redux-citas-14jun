@@ -4,3 +4,7 @@ export const typesAgendar = {
             delete: '[Agendar-citas] eliminar',
 }
 
+export const typesLogin ={
+    login: '[Login] login',
+    logout: '[Login] logout'
+}

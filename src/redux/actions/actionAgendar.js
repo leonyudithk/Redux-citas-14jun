@@ -8,3 +8,10 @@ export const actionAddAgendaSync = (formValue) =>{
     }
 
 }
+
+export const actionDeleteEmailSync = (email)=>{
+    return {
+        type: typesAgendar.delete,
+        payload: email
+    }
+}

@@ -1,11 +1,19 @@
 import React from 'react';
 import { Button, Table } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { actionDeleteEmailSync } from '../redux/actions/actionAgendar';
 
 const Listar = () => {
+   const dispatch = useDispatch()
     // el que va entre {es el nonbre del estado que viene desl reducers}
     //el que esta (es el nombre del estado que se manaja en la store dentro del combineRredcers)
   const { agendaCitas} = useSelector(store => store.agendarCitaStore)
+
+  const handleDelete = (email)=>{
+      alert('vamos a eliminar', email)
+      dispatch(actionDeleteEmailSync(email))
+
+  }
 console.log(agendaCitas)
     return (
         <div>
@@ -32,7 +40,7 @@ console.log(agendaCitas)
                         <td>{cita.telefono}</td>
                         <td>{cita.sintomas}</td>
                         <td>
-                            <Button type="button" className="btn btn-danger">X</Button>
+                            <Button type="button" className="btn btn-danger" onClick={()=>handleDelete(cita.email)}>X</Button>
                         </td>
                     </tr>
                     ))

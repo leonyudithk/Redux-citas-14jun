@@ -13,7 +13,7 @@ export const citasReducers = (state = initialState, action)=>{
             }
             case typesAgendar.delete:
                 return {
-                    agendaCitas: state
+                    agendaCitas: state.agendaCitas.filter(c => c.email !== action.payload)
                }
           
     

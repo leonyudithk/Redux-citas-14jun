@@ -1,9 +1,11 @@
 import { combineReducers, createStore } from "redux";
 import { guardarDatos } from "../../components/LocalStorage";
 import { citasReducers } from "../reducers/citasReducers";
+import { loginReducers } from "../reducers/loginReducers";
 
 const reducers = combineReducers({
-    agendarCitaStore: citasReducers
+    agendarCitaStore: citasReducers,
+    loginStore: loginReducers
 })
 
 export const store = createStore(
