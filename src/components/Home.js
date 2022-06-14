@@ -8,7 +8,7 @@ const Home = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="holder.js/800x400?text=First slide&bg=373940"
+                        src="https://res.cloudinary.com/danimel/image/upload/v1641933600/food_frtbji.jpg"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -19,7 +19,7 @@ const Home = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="holder.js/800x400?text=Second slide&bg=282c34"
+                        src="https://res.cloudinary.com/danimel/image/upload/v1641933600/Hibiscus_Jalape%C3%B1o_Quick_Pickled_Veggies_Artful_Desperado_icfulx.jpg"
                         alt="Second slide"
                     />
 
@@ -31,14 +31,13 @@ const Home = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="holder.js/800x400?text=Third slide&bg=20232a"
+                        src="https://res.cloudinary.com/danimel/image/upload/v1641933600/Kuttu_Ki_Roti___Buckwheat_Flour_Flatbread_xy28va.jpg"
                         alt="Third slide"
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                                             <p>
+                              Que tús alimentos sean tu farmacia.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>

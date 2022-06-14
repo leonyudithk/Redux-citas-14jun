@@ -10,8 +10,8 @@ const NavBars = () => {
           <Navbar.Brand href="#home">Introducción a Redux</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home"><Link to="/">Home</Link></Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#home"><Link to="/add">Add</Link></Nav.Link>
+ 
           </Nav>
         </Container>
       </Navbar>
